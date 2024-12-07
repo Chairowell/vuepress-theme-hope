@@ -40,16 +40,17 @@ npm i -D @vuepress/plugin-revealjs@next
 
 之后启用它:
 
-```js {6} title=".vuepress/config.js"
+```ts {7} title=".vuepress/config.ts"
+import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 
-export default {
+export default defineUserConfig({
   theme: hopeTheme({
-    plugins: {
+    markdown: {
       revealjs: true,
     },
   }),
-};
+});
 ```
 
 ## 幻灯片语法
@@ -137,6 +138,12 @@ const add = (a, b) => {
 - `moon`
 
 各主题的外观，详见 [幻灯片主题][revealjs-themes-demo]。
+
+::: important 资源路径
+
+由于 `@slidestart` 和 `@slideend` 之间的 Markdown 内容由 Reveal.js 在浏览器中处理，因此你只能在幻灯片中使用绝对路径的资源，这些资源必须可以直接在浏览器中访问，不支持相对路径或别名。
+
+:::
 
 ## 演示
 

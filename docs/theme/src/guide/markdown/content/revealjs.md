@@ -40,16 +40,17 @@ npm i -D @vuepress/plugin-revealjs@next
 
 Then enabling via:
 
-```js {6} title=".vuepress/config.js"
+```ts {7} title=".vuepress/config.ts"
+import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
 
-export default {
+export default defineUserConfig({
   theme: hopeTheme({
-    plugins: {
+    markdown: {
       revealjs: true,
     },
   }),
-};
+});
 ```
 
 ## Slide Syntax
@@ -137,6 +138,12 @@ You can enable the following themes in reveal.js via `themes` in plugin options:
 - `moon`
 
 For the appearance of each theme, see [Themes demo][revealjs-themes-demo].
+
+::: important Assets Path
+
+Since markdown contents between `@slidestart` and `@slideend` are handled by Reveal.js at browser, so you can only use absolute paths for assets in slides, which must be accessible directly in browser, relative paths or alias are not supported.
+
+:::
 
 ## Demo
 

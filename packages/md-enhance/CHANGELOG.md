@@ -4,21 +4,30 @@ All notable changes to this project will be documented in this file. See [Conven
 
 <!-- #region recent-change -->
 
+## [2.0.0-rc.60](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.59...v2.0.0-rc.60) (2024-12-06)
+
+### ⚠ BREAKING CHANGES
+
+- replace plugins with official ones and rebuild markdown options (#4553)
+
+### ✨ Features
+
+- **md-enhance:** support more diagrams ([124093d](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/124093d4374fc113f03e23eea2ebd865d8f16abc))
+- replace plugins with official ones and rebuild markdown options ([#4553](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/4553)) ([22787ac](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/22787ac127e25c078638b854eec74f2caa44598c))
+
+<!-- #region recent-change -->
+
 ## 2.0.0-rc.59 (2024-10-21)
 
 - chore: bump deps ([6da06cf](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/6da06cf))
 - chore: bump deps ([52867bf](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/52867bf))
 - chore: update deps ([07a6417](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/07a6417))
 
-<!-- #region recent-change -->
-
 ## [2.0.0-rc.57](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.56...v2.0.0-rc.57) (2024-09-30)
 
 ### ✨ Features
 
 - **theme:** improve compact ([0c383ed](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/0c383edc03e2ef2e276b6bfbed166ad8e7cd9062))
-
-<!-- #region recent-change -->
 
 ## [2.0.0-rc.54](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.53...v2.0.0-rc.54) (2024-09-23)
 
@@ -37,8 +46,6 @@ All notable changes to this project will be documented in this file. See [Conven
 - **md-enhance:** fix mark not working, close [#4464](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/4464) ([1cdbc78](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/1cdbc788f22220138d1237aeb5d08d7cd16cd607))
 - **md-enhance:** fix tabs style ([f963208](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/f963208f080f6288dbb658c0f6afe2a505781d77))
 
-<!-- #region recent-change -->
-
 ## [2.0.0-rc.53](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.52...v2.0.0-rc.53) (2024-09-20)
 
 ### ✨ Features
@@ -53,8 +60,6 @@ All notable changes to this project will be documented in this file. See [Conven
 - **md-enhance:** fix reveal style, close [#4335](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/4335) ([fe71ad0](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/fe71ad029fc8a2d1047767c0eafc827339b938d4))
 - **md-enhance:** incorrect js code wrapper, close [#4355](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/4355) ([#4356](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/4356)) ([c9ff77d](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/c9ff77d2b9f9e28157b51abaebbb41ca4167177d))
 
-<!-- #region recent-change -->
-
 ## [2.0.0-rc.52](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.51...v2.0.0-rc.52) (2024-07-19)
 
 ### ✨ Features
@@ -64,8 +69,6 @@ All notable changes to this project will be documented in this file. See [Conven
 ### 🐛 Bug Fixes
 
 - **md-enhance:** improve tasklist checkbox style ([aa0d0c7](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/aa0d0c70b04a48a71cb369a0e4c1bec573c9cf1f))
-
-<!-- #region recent-change -->
 
 ## [2.0.0-rc.51](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.50...v2.0.0-rc.51) (2024-07-13)
 
@@ -77,13 +80,9 @@ All notable changes to this project will be documented in this file. See [Conven
 
 - fix code tab and code block border radius, close [#4235](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/4235) ([2467234](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/246723447267c659f3c82d1b2ef3295e8aa8414e))
 
-<!-- #region recent-change -->
-
 ## [2.0.0-rc.50](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.49...v2.0.0-rc.50) (2024-06-21)
 
 **Note:** Version bump only for package vuepress-plugin-md-enhance
-
-<!-- #region recent-change -->
 
 ## [2.0.0-rc.49](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-rc.48...v2.0.0-rc.49) (2024-06-18)
 

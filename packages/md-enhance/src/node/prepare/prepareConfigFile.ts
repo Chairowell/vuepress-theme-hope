@@ -1,36 +1,18 @@
-import { getRealPath } from "@vuepress/helper";
+import { getModulePath } from "@vuepress/helper";
 import type { App } from "vuepress/core";
 
 import type { MarkdownEnhancePluginOptions } from "../options.js";
 import { CLIENT_FOLDER } from "../utils.js";
 
-const { url } = import.meta;
-
 export const prepareConfigFile = async (
   app: App,
   options: MarkdownEnhancePluginOptions,
   status: Record<string, boolean>,
-  legacy = true,
 ): Promise<string> => {
   const imports = new Set<string>();
   const enhances = new Set<string>();
 
-  // TODO: Remove this in v2 stable
-  // @ts-expect-error: card does not exist
-  if (options.card && legacy) {
-    imports.add(
-      `import { hasGlobalComponent } from "${getRealPath(
-        "@vuepress/helper/client",
-        url,
-      )}";`,
-    );
-    imports.add(`import { VPCard } from "${CLIENT_FOLDER}compact/index.js";`);
-    enhances.add(
-      `if(!hasGlobalComponent("VPCard", app)) app.component("VPCard", VPCard);`,
-    );
-  }
-
-  if (status.chart) {
+  if (status.chartjs) {
     imports.add(`import ChartJS from "${CLIENT_FOLDER}components/ChartJS.js";`);
     enhances.add(`app.component("ChartJS", ChartJS)`);
   }
@@ -60,9 +42,6 @@ export const prepareConfigFile = async (
 
     enhances.add(`app.component("FlowChart", FlowChart);`);
   }
-
-  if (status.footnote)
-    imports.add(`import "${CLIENT_FOLDER}styles/footnote.scss";`);
 
   if (status.kotlinPlayground) {
     imports.add(
@@ -99,9 +78,9 @@ export const prepareConfigFile = async (
   if (status.sandpack) {
     imports.add(`import { defineAsyncComponent } from "vue";`);
     imports.add(
-      `import { LoadingIcon } from "${getRealPath(
+      `import { LoadingIcon } from "${getModulePath(
         "@vuepress/helper/client",
-        url,
+        import.meta,
       )}";`,
     );
     imports.add(
@@ -119,12 +98,6 @@ app.component(
 );`,
     );
   }
-
-  if (options.spoiler)
-    imports.add(`import "${getRealPath("@mdit/plugin-spoiler/style", url)}";`);
-
-  if (status.tasklist)
-    imports.add(`import "${CLIENT_FOLDER}styles/tasklist.scss";`);
 
   if (status.vuePlayground) {
     imports.add(
