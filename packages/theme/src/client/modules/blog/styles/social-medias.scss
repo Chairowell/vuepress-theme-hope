@@ -10,14 +10,14 @@
   height: 26px;
   margin: 4px;
 
-  svg {
+  svg, img {
     transition: transform var(--vp-t-transform);
   }
 
   &:hover {
     cursor: pointer;
 
-    svg {
+    svg, img {
       transform: scale(1.1, 1.1);
     }
   }
